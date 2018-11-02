@@ -18,4 +18,5 @@ shared_library('filaflat', src,
     '../math/include',
     '../../third_party/robin-map/', 
     ), 
+  link_with: [libutils, ]
   )
