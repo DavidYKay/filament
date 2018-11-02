@@ -16,6 +16,7 @@
 
 #include "MaterialChunk.h"
 
+#include <cstring>
 #include <utils/Log.h>
 #include <private/filament/Variant.h>
 

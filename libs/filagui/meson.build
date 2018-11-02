@@ -13,5 +13,6 @@ material_srcs = [
 shared_library('filagui', src,
 # TODO: include generate headers
 # TODO: link against imgui, filament, filamat
-  include_directories : include_directories('include'), 
+  include_directories : include_directories('include',
+    '../../filament/include/'), 
   )

@@ -18,6 +18,7 @@
 #define TNT_UTILS_ALLOCATOR_H
 
 
+#include <cstddef>
 #include <assert.h>
 #include <stddef.h>
 #include <stdlib.h>

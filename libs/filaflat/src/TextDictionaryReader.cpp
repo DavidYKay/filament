@@ -16,6 +16,7 @@
 
 #include "TextDictionaryReader.h"
 
+#include <cstring>
 #include <utils/Log.h>
 
 namespace filaflat {

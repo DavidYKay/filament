@@ -45,5 +45,10 @@ shared_library('filamat', src,
 # TODO: link against imgui, filament, filamat
   include_directories : include_directories('include',
     'src/eiff',
-    'src/shaders'), 
+    'src/shaders',
+    '../utils/include',
+    '../math/include',
+    '../filaflat/include',
+    '../filabridge/include',
+    ), 
   )
