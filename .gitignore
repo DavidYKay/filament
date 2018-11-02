@@ -9,3 +9,5 @@ dist-*
 toolchains
 filament/docs/html/**
 .vscode
+mesonbuild/
+run
