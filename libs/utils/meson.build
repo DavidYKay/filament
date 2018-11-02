@@ -24,7 +24,6 @@ libutils = shared_library('utils', src,
 # TODO: include generate headers
 dependencies: [ 
   cc.find_library('c++') 
-  #dependency('c++'),
   ],
   include_directories : include_directories(
     'include', 

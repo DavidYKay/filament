@@ -66,3 +66,22 @@ src = [
 #    #'../utils/include',
 #    )
 #  )
+
+# TODO: Update matc flags
+MATC_BASE_FLAGS = '-a all'
+MATC_OPT_FLAGS  = ''
+MATC_TARGET     = 'desktop'
+output_path     = '${GENERATION_ROOT}/generated/material/${localname}.inc'
+fullname        = get_filename_component("${mat_src}", ABSOLUTE)
+
+run_command(
+  'matc',
+  MATC_BASE_FLAGS,
+  MATC_OPT_FLAGS,
+  '-p',
+  MATC_TARGET,
+  '-m material',
+  '-f header',
+  '-o',
+  output_path,
+  fullname)
