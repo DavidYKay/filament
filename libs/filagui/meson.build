@@ -14,5 +14,12 @@ shared_library('filagui', src,
 # TODO: include generate headers
 # TODO: link against imgui, filament, filamat
   include_directories : include_directories('include',
-    '../../filament/include/'), 
+    '../utils/include',
+    '../math/include',
+    '../filabridge/include',
+    '../filamat/include',
+    '../../filament/include',
+    '../../third_party/imgui/include',
+    #'../../third_party/astcenc/include',
+    ), 
   )

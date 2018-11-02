@@ -7,7 +7,9 @@ src = [
 
 libimage = shared_library('image', src,
 # TODO: include generate headers
-  include_directories : include_directories('include'), 
-  link_with: libutils
-  # TODO: link against math, utils
+  link_with: libutils,
+  include_directories : include_directories('include',
+    '../math/include',
+    '../utils/include',
+    ),
   )

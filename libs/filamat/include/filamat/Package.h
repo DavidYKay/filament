@@ -22,6 +22,7 @@
 #include <stdlib.h>
 
 #include <cstddef>
+#include <cstring>
 #include <functional>
 
 #include <utils/compiler.h>
