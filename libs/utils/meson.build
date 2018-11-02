@@ -1,3 +1,5 @@
+cc = meson.get_compiler('cpp',)
+
 src = [
   'src/ashmem.cpp',
   'src/Allocator.cpp',
@@ -20,6 +22,12 @@ src = [
 
 libutils = shared_library('utils', src,
 # TODO: include generate headers
-  include_directories : include_directories('include'), 
+dependencies: [ 
+  cc.find_library('c++') 
+  #dependency('c++'),
+  ],
+  include_directories : include_directories(
+    'include', 
+    '../../third_party/robin-map/'), 
   # TODO: link against Threads
   )

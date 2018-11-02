@@ -7,6 +7,12 @@ src = [
 ]
 # TODO: fPIC
 
-shared_library('filabridge', src,
-  include_directories : include_directories('include'), 
+libfilabridge = shared_library('filabridge', src,
+  include_directories : include_directories('include', 
+    '../math/include',
+    '../utils/include',
+    ), 
+  link_with: [libutils, 
+    #libmath,
+    ]
   )

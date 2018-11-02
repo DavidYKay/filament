@@ -6,5 +6,8 @@ src = [
 
 shared_library('bluevk', src,
   #dependencies: [ cc.find_library('dl') ],
-  include_directories : include_directories('include'), 
+  include_directories : include_directories('include',
+    '../utils/include',
+    ), 
+  #link_with: [libutils, ]
   )

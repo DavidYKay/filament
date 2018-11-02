@@ -19,7 +19,7 @@ src = [
 
 # 'include'
     # set(CMAKE_CXX_FLAGS '${CMAKE_CXX_FLAGS} -fPIC')
-shared_library('bluegl', src,
+libbluegl = shared_library('bluegl', src,
   dependencies: [ cc.find_library('dl') ],
   include_directories : include_directories('include'), 
   )
