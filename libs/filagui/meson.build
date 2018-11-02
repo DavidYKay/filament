@@ -20,6 +20,5 @@ shared_library('filagui', src,
     '../filamat/include',
     '../../filament/include',
     '../../third_party/imgui/include',
-    #'../../third_party/astcenc/include',
     ), 
   )
