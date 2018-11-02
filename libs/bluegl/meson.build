@@ -12,6 +12,7 @@ cc = meson.get_compiler('cpp',)
 #    ])
 
 src = [
+'src/BlueGL.cpp',
 'src/BlueGLLinux.cpp',
 'src/BlueGLCoreLinuxImpl.S',
 ]

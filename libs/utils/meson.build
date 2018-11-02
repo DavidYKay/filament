@@ -18,7 +18,7 @@ src = [
   'src/linux/Path.cpp',
   ]
 
-shared_library('utils', src,
+libutils = shared_library('utils', src,
 # TODO: include generate headers
   include_directories : include_directories('include'), 
   # TODO: link against Threads

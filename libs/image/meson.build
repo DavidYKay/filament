@@ -5,8 +5,9 @@ src = [
   'src/LinearImage.cpp',
   ]
 
-shared_library('image', src,
+libimage = shared_library('image', src,
 # TODO: include generate headers
   include_directories : include_directories('include'), 
+  link_with: libutils
   # TODO: link against math, utils
   )
