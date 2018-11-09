@@ -56,10 +56,15 @@ src = [
   #'src/Viewport.cpp',
 ]
 
-libfilament = shared_library('filament', src,
+libfilament = shared_library('filament', 
+    src,
   # TODO: include generate headers
-  #link_with: libutils,
+  link_with: [
+      #libbluevk,
+  # libutils,
+  ],
   dependencies: [
+      depbluevk,
       #cc.find_library('c++') 
   ],
   include_directories : include_directories('include',

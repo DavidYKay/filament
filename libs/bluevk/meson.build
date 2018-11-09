@@ -5,10 +5,11 @@ src = [
 'src/BlueVKLinuxAndroid.cpp',
 ]
 
-shared_library('bluevk', src,
+depbluevk = declare_dependency(
+  sources: src,
   dependencies: [ 
       cc.find_library('dl'),
-      cc.find_library('pthread'),
+      #cc.find_library('pthread'),
       ],
   include_directories : include_directories('include',
       #'../utils/include',
@@ -18,3 +19,5 @@ shared_library('bluevk', src,
       deputils, 
       ]
   )
+
+#libbluevk = shared_library('bluevk', dependencies: depbluevk)

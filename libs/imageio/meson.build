@@ -7,6 +7,9 @@ src = [
 
 shared_library('imageio', src,
 # TODO: include generate headers
+  dependencies : [
+      dependency('libpng'),
+  ],
   include_directories : include_directories('include',
     '../utils/include',
     '../math/include',

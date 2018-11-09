@@ -24,8 +24,9 @@ deputils = declare_dependency(
   sources: src,
   # TODO: include generate headers
   dependencies: [ 
-    cc.find_library('c++') 
-    ],
+    cc.find_library('c++'),
+    cc.find_library('pthread'),
+  ],
   include_directories : include_directories(
     'include', 
     '../../third_party/robin-map/'), 
