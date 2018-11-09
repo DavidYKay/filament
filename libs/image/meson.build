@@ -15,6 +15,9 @@ include_dirs = include_directories('include',
 depimage = declare_dependency(
   sources: src,
   include_directories : include_dirs,
+  dependencies: [
+    deputils,
+  ],
   #link_with: libutils,
   #link_with: libutils,
   )
@@ -23,6 +26,5 @@ libimage = shared_library('image', src,
 # TODO: include generate headers
   dependencies: [
     depimage,
-    deputils,
     ],
   include_directories : include_dirs)

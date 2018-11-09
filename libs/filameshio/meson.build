@@ -2,13 +2,17 @@ src = [
   'src/MeshIO.cpp',
 ]
 
-shared_library('filameshio', src,
+depfilameshio = declare_dependency(
+    sources: src,
 # TODO: include generate headers
 # TODO: link against imgui, filament, filamat
-  include_directories : include_directories('include',
-    '../utils/include',
-    '../math/include',
-    '../filabridge/include',
-    '../../filament/include/',
-    ), 
+  dependencies: [
+      deputils,
+      depmath,
+      depfilabridge,
+      depfilament,
+  ],
+  #link_with: [ libfilament ],
+  include_directories : include_directories('include'), 
   )
+#shared_library('filameshio', src,

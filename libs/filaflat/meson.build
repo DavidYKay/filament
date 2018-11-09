@@ -13,13 +13,16 @@ src = [
 shared_library('filaflat', src,
   dependencies: [ 
     cc.find_library('dl'),
-    deputils
+    deputils,
+    depfilabridge,
+    depmath,
+    #deprobinmap,
     ],
   include_directories : include_directories('include',
-    '../utils/include',
-    '../filabridge/include',
-    '../math/include',
-    '../../third_party/robin-map/', 
+      #'../utils/include',
+      #'../filabridge/include',
+      #'../math/include',
+      '../../third_party/robin-map/', 
     ), 
   #link_with: [libutils, ]
   )

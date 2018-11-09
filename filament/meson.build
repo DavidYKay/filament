@@ -56,8 +56,8 @@ src = [
   #'src/Viewport.cpp',
 ]
 
-libfilament = shared_library('filament', 
-    src,
+depfilament = declare_dependency(
+    sources: src,
   # TODO: include generate headers
   link_with: [
       #libbluevk,
@@ -77,6 +77,8 @@ libfilament = shared_library('filament',
     #'../utils/include',
     )
   )
+
+#libfilament = shared_library('filament', 
 
 # TODO: Update matc flags
 MATC_BASE_FLAGS = '-a all'
