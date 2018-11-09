@@ -1,3 +1,4 @@
+cc = meson.get_compiler('cpp',)
 
 src = [
 'src/BlueVK.cpp',
@@ -5,10 +6,15 @@ src = [
 ]
 
 shared_library('bluevk', src,
-  #dependencies: [ cc.find_library('dl') ],
+  dependencies: [ 
+      cc.find_library('dl'),
+      cc.find_library('pthread'),
+      ],
   include_directories : include_directories('include',
-    '../utils/include',
+      #'../utils/include',
     ), 
   #link_with: [libutils, ]
-  dependencies: [deputils, ]
+  dependencies: [
+      deputils, 
+      ]
   )

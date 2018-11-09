@@ -22,10 +22,10 @@ src = [
 
 deputils = declare_dependency(
   sources: src,
-# TODO: include generate headers
-dependencies: [ 
-  cc.find_library('c++') 
-  ],
+  # TODO: include generate headers
+  dependencies: [ 
+    cc.find_library('c++') 
+    ],
   include_directories : include_directories(
     'include', 
     '../../third_party/robin-map/'), 

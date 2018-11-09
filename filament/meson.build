@@ -1,3 +1,5 @@
+cc = meson.get_compiler('cpp',)
+
 src = [
   #'src/components/CameraManager.cpp',
   #'src/components/LightManager.cpp',
@@ -54,18 +56,21 @@ src = [
   #'src/Viewport.cpp',
 ]
 
-#libfilament = shared_library('filament', src,
-#  # TODO: include generate headers
-#  #link_with: libutils,
-#  include_directories : include_directories('include',
-#    'src/components',
-#    'src/details',
-#    'src/driver',
-#    'src',
-#    #'../math/include',
-#    #'../utils/include',
-#    )
-#  )
+libfilament = shared_library('filament', src,
+  # TODO: include generate headers
+  #link_with: libutils,
+  dependencies: [
+      #cc.find_library('c++') 
+  ],
+  include_directories : include_directories('include',
+    'src/components',
+    'src/details',
+    'src/driver',
+    'src',
+    #'../math/include',
+    #'../utils/include',
+    )
+  )
 
 # TODO: Update matc flags
 MATC_BASE_FLAGS = '-a all'
@@ -77,3 +82,5 @@ output_path     = '/home/dk/Tools/vr/renderer/filament/src/out/generated/myfile.
 fullname        = '/home/dk/Tools/vr/renderer/filament/src/filament/src/materials/defaultMaterial.mat'
 
 # run_command( 'matc', MATC_BASE_FLAGS, MATC_OPT_FLAGS, '-p', MATC_TARGET, '-m material', '-f header', '-o', output_path, fullname)
+
+
