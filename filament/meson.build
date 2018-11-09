@@ -71,8 +71,10 @@ src = [
 MATC_BASE_FLAGS = '-a all'
 MATC_OPT_FLAGS  = ''
 MATC_TARGET     = 'desktop'
-output_path     = '${GENERATION_ROOT}/generated/material/${localname}.inc'
-fullname        = get_filename_component("${mat_src}", ABSOLUTE)
+#output_path     = '${GENERATION_ROOT}/generated/material/${localname}.inc'
+#fullname        = get_filename_component("${mat_src}", ABSOLUTE)
+output_path     = '/home/dk/Tools/vr/renderer/filament/src/out/generated/myfile.inc'
+fullname        = '/home/dk/Tools/vr/renderer/filament/src/filament/src/materials/defaultMaterial.mat' 
 
 run_command(
   'matc',
