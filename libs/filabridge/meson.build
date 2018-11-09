@@ -10,11 +10,10 @@ src = [
 depfilabridge = declare_dependency(
   sources: src,
   include_directories : include_directories('include', 
-    '../math/include',
-    '../utils/include',
     ), 
   dependencies: [
     deputils, 
+    depmath, 
   ],
   link_with: [
     #libutils, 

@@ -10,7 +10,8 @@ src = [
 ]
 # TODO: fPIC
 
-shared_library('filaflat', src,
+depfilaflat = declare_dependency(
+  sources: src,
   dependencies: [ 
     cc.find_library('dl'),
     deputils,
@@ -26,3 +27,4 @@ shared_library('filaflat', src,
     ), 
   #link_with: [libutils, ]
   )
+#shared_library('filaflat', src,

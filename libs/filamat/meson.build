@@ -42,15 +42,17 @@ src = [
 
 depfilamat = declare_dependency(
   sources: src,
+  dependencies: [
+      #deputils,
+      #depmath,
+      depfilaflat,
+      depfilabridge,
+],
 # TODO: include generate headers
 # TODO: link against imgui, filament, filamat
   include_directories : include_directories('include',
     'src/eiff',
     'src/shaders',
-    '../utils/include',
-    '../math/include',
-    '../filaflat/include',
-    '../filabridge/include',
     ), 
   )
 

@@ -7,8 +7,8 @@ depfilameshio = declare_dependency(
 # TODO: include generate headers
 # TODO: link against imgui, filament, filamat
   dependencies: [
-      deputils,
-      depmath,
+      #deputils,
+      #depmath,
       depfilabridge,
       depfilament,
   ],
