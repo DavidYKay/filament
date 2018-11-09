@@ -65,6 +65,7 @@ libfilament = shared_library('filament',
   ],
   dependencies: [
       depbluevk,
+      depimage,
       #cc.find_library('c++') 
   ],
   include_directories : include_directories('include',

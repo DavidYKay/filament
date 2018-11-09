@@ -9,11 +9,12 @@ shared_library('imageio', src,
 # TODO: include generate headers
   dependencies : [
       dependency('libpng'),
+      depimage,
   ],
   include_directories : include_directories('include',
     '../utils/include',
     '../math/include',
-    '../image/include',
+    #'../image/include',
     '../../third_party/tinyexr',
     '../../third_party/astcenc/include',
     '../../third_party/stb',
