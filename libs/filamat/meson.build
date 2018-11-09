@@ -51,8 +51,9 @@ depfilamat = declare_dependency(
 # TODO: include generate headers
 # TODO: link against imgui, filament, filamat
   include_directories : include_directories('include',
-    'src/eiff',
-    'src/shaders',
+    # 'src/eiff',
+    # 'src/shaders',
+    'src',
     ), 
   )
 
