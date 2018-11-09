@@ -8,7 +8,8 @@ src = [
 shared_library('imageio', src,
 # TODO: include generate headers
   dependencies : [
-      dependency('libpng'),
+      #dependency('libpng'),
+      deppng,
       depimage,
       deptinyexr,
       depastcenc,
@@ -19,6 +20,6 @@ shared_library('imageio', src,
     '../../third_party/stb',
     '../../third_party/etc2comp/EtcLib/Etc',
     '../../third_party/etc2comp/EtcLib/EtcCodec',
-    ), 
+    ),
   # TODO: link against image math png tinyexr utils z astcenc stb EtcLib
   )

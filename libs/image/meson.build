@@ -8,8 +8,6 @@ src = [
 #libimage = shared_library('image', src,
 
 include_dirs = include_directories('include',
-    '../math/include',
-    '../utils/include',
     )
 
 depimage = declare_dependency(
@@ -17,6 +15,7 @@ depimage = declare_dependency(
   include_directories : include_dirs,
   dependencies: [
     deputils,
+    depmath,
   ],
   #link_with: libutils,
   #link_with: libutils,
