@@ -20,7 +20,8 @@ src = [
   'src/linux/Path.cpp',
   ]
 
-libutils = shared_library('utils', src,
+deputils = declare_dependency(
+  sources: src,
 # TODO: include generate headers
 dependencies: [ 
   cc.find_library('c++') 
@@ -30,3 +31,5 @@ dependencies: [
     '../../third_party/robin-map/'), 
   # TODO: link against Threads
   )
+
+#libutils = shared_library('utils', src,

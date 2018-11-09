@@ -11,12 +11,15 @@ src = [
 # TODO: fPIC
 
 shared_library('filaflat', src,
-  dependencies: [ cc.find_library('dl') ],
+  dependencies: [ 
+    cc.find_library('dl'),
+    deputils
+    ],
   include_directories : include_directories('include',
     '../utils/include',
     '../filabridge/include',
     '../math/include',
     '../../third_party/robin-map/', 
     ), 
-  link_with: [libutils, ]
+  #link_with: [libutils, ]
   )

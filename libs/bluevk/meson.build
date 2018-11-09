@@ -9,5 +9,6 @@ shared_library('bluevk', src,
   include_directories : include_directories('include',
     '../utils/include',
     ), 
-  link_with: [libutils, ]
+  #link_with: [libutils, ]
+  dependencies: [deputils, ]
   )

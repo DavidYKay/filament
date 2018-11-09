@@ -40,7 +40,8 @@ src = [
 
 # TODO: fPIC
 
-shared_library('filamat', src,
+depfilamat = declare_dependency(
+  sources: src,
 # TODO: include generate headers
 # TODO: link against imgui, filament, filamat
   include_directories : include_directories('include',
@@ -52,3 +53,5 @@ shared_library('filamat', src,
     '../filabridge/include',
     ), 
   )
+
+# libfilamat = shared_library('filamat', dependencies: depfilamat)

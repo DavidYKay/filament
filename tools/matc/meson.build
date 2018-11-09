@@ -18,18 +18,19 @@ src = [
   ]
 
 
-libs = [
-  'getopt',
-  'filamat',
-  'filabridge',
-  'utils',
+deps = [
+  depgetopt,
+  depfilamat,
+  depfilabridge,
+  deputils,
 ]
 
 # target_link_libraries(${TARGET} matlang)
 
-libimage = executable('matc', src,
+matc = executable('matc', src,
   # TODO: include generate headers
-  link_with: libs,
+  #link_with: libs,
+  dependencies: deps,
   include_directories : include_directories(
     'src/matc/',
     'src/matc/sca/',
