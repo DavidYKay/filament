@@ -1,7 +1,10 @@
 project('filament', 'cpp', 'c',
-  default_options : ['c_std=c11', 'cpp_std=c++14'])
+  default_options : [
+      'c_std=c11', 
+      'cpp_std=c++14',
+      ])
 
-add_global_arguments('-w', language: 'c++')
+add_global_arguments('-w', language: 'cpp')
 add_global_arguments('-w', language: 'c')
 
 subdir('third_party')
