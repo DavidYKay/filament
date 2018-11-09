@@ -32,7 +32,11 @@ matc = executable('matc', src,
   #link_with: libs,
   dependencies: deps,
   include_directories : include_directories(
-    'src/matc/',
-    'src/matc/sca/',
+    'src/',
+    #'src/matc/',
+    #'src/matc/sca/',
+    '../../third_party/glslang/glslang/Include/',
+    '../../third_party/glslang/glslang/Public/',
+    '../../third_party/glslang/glslang/MachineIndependent/',
     ),
   )
