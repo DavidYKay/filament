@@ -38,5 +38,6 @@ matc = executable('matc', src,
     '../../third_party/glslang/glslang/Include/',
     '../../third_party/glslang/glslang/Public/',
     '../../third_party/glslang/glslang/MachineIndependent/',
+    '../../third_party/spirv-tools/include/',
     ),
   )
