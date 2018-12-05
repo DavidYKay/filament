@@ -1,6 +1,6 @@
 project('filament', 'cpp', 'c',
   default_options : [
-      'c_std=c11', 
+      'c_std=c14', 
       'cpp_std=c++14',
       ])
 
