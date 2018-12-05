@@ -1,5 +1,6 @@
 subdir('getopt')
 subdir('tinyexr')
 subdir('astcenc')
-subdir('libpng')
 subdir('etc2comp')
+subdir('libz')
+subdir('libpng')

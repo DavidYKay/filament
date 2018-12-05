@@ -30,6 +30,7 @@ src = [
 deppng = declare_dependency(
         sources: src,
   dependencies : [
+    deplibz,
   ],
   include_directories : include_directories('.'),
   )
