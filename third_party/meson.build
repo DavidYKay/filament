@@ -1,4 +1,5 @@
 subdir('smol-v')
+subdir('stb')
 subdir('getopt')
 subdir('tinyexr')
 subdir('astcenc')

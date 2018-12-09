@@ -43,6 +43,7 @@ depfilamat = declare_dependency(
   dependencies: [
       #deputils,
       #depmath,
+      depsmolv,
       depfilaflat,
       depfilabridge,
 ],
