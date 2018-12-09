@@ -8,7 +8,6 @@
 #   pngstruct.h
 
 
-
 src = [
   'png.c',
   'pngerror.c',

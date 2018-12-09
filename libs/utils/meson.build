@@ -16,7 +16,8 @@ src = [
   'src/Path.cpp',
   'src/Profiler.cpp',
   'src/Systrace.cpp',
-  'src/linux/futex.cpp',
+  'src/linux/Condition.cpp',
+  'src/linux/Mutex.cpp',
   'src/linux/Path.cpp',
   ]
 

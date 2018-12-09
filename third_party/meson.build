@@ -1,3 +1,4 @@
+subdir('smol-v')
 subdir('getopt')
 subdir('tinyexr')
 subdir('astcenc')

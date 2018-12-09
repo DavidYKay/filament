@@ -64,6 +64,7 @@ depfilament = declare_dependency(
   # libutils,
   ],
   dependencies: [
+      depsmolv,
       depbluevk,
       depimage,
       #cc.find_library('c++') 

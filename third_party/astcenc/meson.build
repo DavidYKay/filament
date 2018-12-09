@@ -30,6 +30,8 @@ src = [
 
 depastcenc = declare_dependency(
     sources: src,
-    include_directories : include_directories('include'), 
+    include_directories : include_directories('include',
+      #'../stb/',
+      ), 
   )
   #shared_library('tinyexr', 

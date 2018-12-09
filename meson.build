@@ -1,10 +1,13 @@
 project('filament', 'cpp', 'c',
   default_options : [
-      'c_std=c14', 
+      'c_std=c11', 
       'cpp_std=c++14',
+      #'cpp_stdlib=libc++',
+      #'stdlib=libc++',
       ])
 
 add_global_arguments('-w', language: 'cpp')
+add_global_arguments('-stdlib=libc++', language: 'cpp')
 add_global_arguments('-w', language: 'c')
 
 subdir('third_party')
